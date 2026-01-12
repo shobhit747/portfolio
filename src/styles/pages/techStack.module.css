@@ -1,0 +1,54 @@
+.content{
+    padding-left: 70px;
+    width: calc(100vw - 100px);
+    height: calc(100vh - 277px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+}
+.content p{
+    font-size: 18px;
+    padding-top: 15vh;
+    width: 70%;
+}
+
+.buttonGroup {
+    width: min-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10;
+}
+.buttonGroup div{
+    padding: 20;
+    font-size: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.buttonGroup div svg{
+    height: 40;
+}
+.buttonGroup div svg path{
+    fill: white;
+}
+
+.middleButton {
+    width: max-content;
+    color: white;
+}
+
+.buttonGroup div:hover{
+    background-color: #C46AF0;
+    color: black;
+    border-color: #C46AF0;
+}
+
+.buttonGroup div:hover svg path{
+    fill: black;
+}

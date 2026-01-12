@@ -1,0 +1,16 @@
+.header{
+    width: calc(100% -130);
+    border-bottom: 0.5px solid black;
+    padding: 5 70;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.header img{
+    height: 130;
+    padding: 30 0 ;
+    margin: 0;
+    width: min-content;
+}

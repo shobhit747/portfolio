@@ -1,0 +1,63 @@
+.page{
+    background-color: #2DC7FF;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.svgImage {
+    width: 500;
+}
+
+.content {
+    width: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 10;
+}
+
+.subText {
+    opacity: .8;
+    font-size: 18;
+    font-weight: 500;
+}
+
+.knowMeButton {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10;
+    font-size: 20;
+    padding: 5 20;
+    width: min-content;
+    border: none;
+    outline: none;
+    align-self: center;
+    margin: 40 auto 0 auto;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.knowMeButton:hover {
+    box-shadow: 10 10 .5 rgb(37, 37, 37);
+    background-color: white;
+    color: black;
+}
+
+.knowMeButton svg path{
+    transition: 0.5s;
+}
+
+.knowMeButton:hover svg path{
+    fill: black;
+
+}
