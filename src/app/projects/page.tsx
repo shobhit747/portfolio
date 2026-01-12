@@ -2,7 +2,12 @@ import ContactBar from "@/components/contactBar";
 import Header from "@/components/header";
 import NavigationButtons from "@/components/navigationButton";
 import { pages } from "@/utils/appRoutes";
+import ProjectCard from "@/components/projectCard";
 import style from '@/styles/pages/projects.module.css';
+
+import ytAudioImg from '@/assets/images/projectImages/ytAudio.png'
+import steamWorkdown from '@/assets/images/projectImages/steamWorkDown.png'
+import apiProject from '@/assets/images/projectImages/apiProject.png'
 
 export default function Home() {
   return (
@@ -10,15 +15,26 @@ export default function Home() {
       <Header currentPage={pages.projects.title} />
       <ContactBar currentPage={pages.projects.title}/>
       <div className={style.content}>
-        <p> Hii I’m Shobhit S. Thakur,<br/>
-            A computer science and engineering student graduating in 2026.
-            <br/>
-            <br />
-            My main line of interest aligns with working on software and tools that provide meaningful value to the end users. 
-            <br />
-            <br />
-            I enjoy working on backend systems, native applications, and other projects that involves interacting with the lower level system.
-        </p>
+        <div className={style.cards}>
+          <ProjectCard 
+            name="YT Audio" 
+            description="An Electron based desktop music player that allows you to download and play your favorite songs, podcasts, and other audio content directly from YouTube"
+            projectLink=""
+            projectImage={ytAudioImg}
+          />
+          <ProjectCard 
+            name="Steam Workdown" 
+            description="Steam_Wrokdown is a desktop GUI application built using C++ and GTK 3 that allows users to download Steam Workshop items easily and efficiently."
+            projectLink=""
+            projectImage={steamWorkdown}
+          />
+          <ProjectCard 
+            name="NodeJS Backend" 
+            description="Simple NodeJS backend API is a backend project that highlights the integration of NodeJS API with Docker, Docker Compose and Mongodb database. "
+            projectLink=""
+            projectImage={apiProject}
+          />
+        </div>
       </div>
       <NavigationButtons currentPage={pages.projects.title} nextPage={null} currentPageStyle={style}/>
     </div>

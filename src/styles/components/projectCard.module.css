@@ -1,0 +1,45 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    color: white;
+    width: min-content;
+    height: min-content;
+    gap: 30;
+    padding: 40 20;
+    margin-top: 30px;
+    transition: 0.5s;
+}
+
+.card:hover {
+    margin-top: 20px;
+}
+
+.card .cardHeader {
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    gap: auto;
+    justify-content: space-between;
+    padding: 0;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.card .cardHeader a{
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+}
+
+.card .cardDescription{
+    font-size: 14px;
+    width: calc(100% - 20px);
+    text-align: center;
+    color: white;
+    margin: none;
+    padding: 0;
+}

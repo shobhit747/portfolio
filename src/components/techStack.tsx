@@ -38,7 +38,7 @@ export default function TechStack() {
     ]
 
     const content = techStack.map((contentBar) => (
-        <div className={style.wholeContentBar}>
+        <div className={style.wholeContentBar} key={contentBar[0]}>
             <div className={style.contentCategory}>
                 {contentBar[0]}
                 <Image src={rightaArrowPix} alt=''/>
