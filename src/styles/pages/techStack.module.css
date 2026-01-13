@@ -81,14 +81,15 @@
         justify-content: center;
         align-items: center;
         width: 100vw;
-        padding: 20px 0;
+        padding: 15px 0;
         border-top: 0.5px solid white ;
     }
     .buttonGroup div{
         padding: 20;
-        font-size: 20;
+        border-width: 0.5px;
+        font-size: 14;
     }
     .buttonGroup div svg{
-        height: 26;
+        height: 19;
     }
 }

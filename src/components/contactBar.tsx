@@ -26,9 +26,9 @@ export default function Contact({ currentPage }: props){
         }
     },[currentPage]);
 
-    const correctPage = currentPage === pages.home.title;
+    const correctPage = currentPage === pages.home.title || currentPage === pages.navigate.title;
     const posStyle = correctPage ? 'fixed' : 'initial';
-    const borderStyle = correctPage ? 'none' : `1px solid ${borderTextAndSvgColor}`;
+    const borderStyle = correctPage ? 'none' : `0.5px solid ${borderTextAndSvgColor}`;
     
     // let justifyContentStyle = correctPage ? 'center' : 'flex-start' 
     let [justifyContentStyle, setJustifyContentStyle] = useState(correctPage ? 'center' : 'flex-start' )

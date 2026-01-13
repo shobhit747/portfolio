@@ -1,3 +1,5 @@
+'use client'
+
 import cpp from '@/assets/images/icons/cpp.svg'
 import python from '@/assets/images/icons/python.svg'
 import typescript from '@/assets/images/icons/typescript.svg'
@@ -18,6 +20,7 @@ import rightaArrowPix from '@/assets/images/icons/rightArrowPix.svg'
 import Image from 'next/image'
 
 import style from '@/styles/components/techStackComp.module.css'
+import { useEffect, useState } from 'react'
 
 type techStack = {
     programmingLangs: [string,any][],
@@ -37,16 +40,17 @@ export default function TechStack() {
         ['UI/UX', [['Figma',figma]]]
     ]
 
+
     const content = techStack.map((contentBar) => (
         <div className={style.wholeContentBar} key={contentBar[0]}>
             <div className={style.contentCategory}>
                 {contentBar[0]}
-                <Image height={34} src={rightaArrowPix} alt='' style={{width:'auto', height:'auto'}}/>
+                <Image height={34} src={rightaArrowPix} alt=''/>
             </div>
             {contentBar[1].map(dataBlock => (
                 <div className={style.contentBlock} key={dataBlock[0]}>
                     {dataBlock[0]}
-                    <Image height={34} src={dataBlock[1]} alt='' style={{width:'auto', height:'auto'}}/>
+                    <Image height={34} src={dataBlock[1]} alt=''/>
                 </div>
             ))}
         </div>

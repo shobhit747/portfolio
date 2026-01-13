@@ -3,6 +3,7 @@ import ContactBar from '@/components/contactBar'
 import { pages } from "@/utils/appRoutes";
 import style from '@/styles/pages/about.module.css'
 import NavigationButtons from "@/components/navigationButton";
+import { colors } from "@/styles/constants";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
             I enjoy working on backend systems, native applications, and other projects that involves interacting with the lower level system.
         </p>
       </div>
-      <NavigationButtons currentPage={pages.about.title} nextPage={pages.techStack.href} currentPageStyle={style}/>
+      <NavigationButtons previousPage={pages.home.href} currentPage={pages.about.title} nextPage={pages.techStack.href} currentPageStyle={style} navigateColor={colors.about.secondary}/>
     </div>
   );
 }

@@ -43,3 +43,29 @@
     margin: none;
     padding: 0;
 }
+
+@media screen and (width <= 650px) {
+    .card {
+        border: 0.5px solid white;
+        width: 80vw;
+        height: min-content;
+        gap: 5;
+        padding: 20 20;
+        margin-top: 20px;
+    }
+
+    .card .projectImg {
+        height: 170px;
+        width: auto;
+    }
+    .card .cardHeader {
+        width: calc(100% - 20px);
+        font-size: 18px;
+    }
+
+    .card .cardDescription{
+        height: max-content;
+        font-size: 12px;
+    }
+
+}

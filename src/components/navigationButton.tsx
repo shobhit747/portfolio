@@ -7,12 +7,14 @@ import { pages } from "@/utils/appRoutes";
 import { colors } from "@/styles/constants";
 
 type props = {
+    previousPage: string,
     currentPage: string,
     nextPage: string|null,
+    navigateColor: string, 
     currentPageStyle:  { readonly [key: string]: string }
 }
 
-export default function NavigationButtons({currentPage, nextPage, currentPageStyle}: props){
+export default function NavigationButtons({currentPage, nextPage, currentPageStyle, navigateColor, previousPage}: props){
     
     const router = useRouter()
     const style = currentPageStyle;
@@ -31,14 +33,14 @@ export default function NavigationButtons({currentPage, nextPage, currentPageSty
         <div className={style.buttonGroup}>
             {/* left button */}
             <div 
-                onClick={() => router.back()}
+                onClick={() => router.push(previousPage)}
             >
                 <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M43.3334 23.8333H16.9651L29.0767 11.7216L26.0001 8.66663L8.66675 26L26.0001 43.3333L29.0551 40.2783L16.9651 28.1666H43.3334V23.8333Z"/>
                 </svg>
             </div>
             {/* middle button */}
-            <div
+            <div onClick={() => router.replace(`${pages.navigate.href}/${navigateColor.replace('#','')}`)}
                 className={style.middleButton}
             >{currentPage}</div>
 

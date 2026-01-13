@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import './globals.css';
 import { JetBrains_Mono } from 'next/font/google';
 
@@ -11,11 +11,15 @@ export const metadata: Metadata = {
   title: "Portfolio",
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1
+}
+
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>){
   return (
     <html lang="en">
-      <meta name="viewport" content="with=device-width,initial-scale=1"/>
-      <body className={jetBrains_Mono.className} style={{maxHeight:'100vh', backgroundColor:'blue'}}>
+      <body className={jetBrains_Mono.className} style={{maxHeight:'100vh'}}>
         {children}
       </body>
     </html>

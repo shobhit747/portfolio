@@ -1,0 +1,45 @@
+.page{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.page .links{
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.page .links a{
+    text-decoration: none;
+    width: 90%;
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+    color: black;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.page .links a:hover{
+    width: 100%;
+}
+
+@media screen and (width <= 650px) {
+    .page{
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .page .links {
+        padding-top: 200px;
+    }
+    .page .links a{
+        /* width: ; */
+        font-size: 20px;
+    }
+}

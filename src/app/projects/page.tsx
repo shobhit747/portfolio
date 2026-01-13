@@ -8,6 +8,7 @@ import style from '@/styles/pages/projects.module.css';
 import ytAudioImg from '@/assets/images/projectImages/ytAudio.png'
 import steamWorkdown from '@/assets/images/projectImages/steamWorkDown.png'
 import apiProject from '@/assets/images/projectImages/apiProject.png'
+import { colors } from "@/styles/constants";
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <NavigationButtons currentPage={pages.projects.title} nextPage={null} currentPageStyle={style}/>
+      <NavigationButtons previousPage={pages.techStack.href} currentPage={pages.projects.title} nextPage={null} currentPageStyle={style} navigateColor={colors.projects.secondary}/>
     </div>
   );
 }

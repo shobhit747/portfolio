@@ -5,6 +5,7 @@ import NavigationButtons from "@/components/navigationButton";
 import TechStack from "@/components/techStack";
 
 import style from '@/styles/pages/techStack.module.css'
+import { colors } from "@/styles/constants";
 
 export default function Home() {
 
@@ -15,7 +16,7 @@ export default function Home() {
       <div className={style.content}>
         <TechStack />
       </div>
-      <NavigationButtons currentPage={pages.techStack.title} nextPage={pages.projects.href} currentPageStyle={style}/>
+      <NavigationButtons previousPage={pages.about.href} currentPage={pages.techStack.title} nextPage={pages.projects.href} currentPageStyle={style} navigateColor={colors.techStack.secondary}/>
     </div>
   );
 }

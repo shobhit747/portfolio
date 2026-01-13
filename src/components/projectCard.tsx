@@ -21,7 +21,7 @@ export default function ProjectCard({ name, description, projectImage, projectLi
                 </a>
             </div>
             <div style={{height:215,display:'flex',justifyContent:'center',alignItems:'center'}}>
-                <Image style={{padding:0}} width={320} src={projectImage} alt=""/>
+                <Image className={style.projectImg} style={{padding:0}} width={320} src={projectImage} alt=""/>
             </div>
             <p className={style.cardDescription}>{description}</p>
         </div>

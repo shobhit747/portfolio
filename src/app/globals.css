@@ -1,7 +1,10 @@
 * {
     padding: 0;
     margin: 0;
-    
+}
+html, body{
+    overflow: hidden;
+    min-height: 100vh;
 }
 
 p, a{

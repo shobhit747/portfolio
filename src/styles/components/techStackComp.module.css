@@ -54,9 +54,9 @@
 @media screen and (width <= 650px) {
     .contentBars{
         gap: 10px;
-        padding-top: 50px;
+        padding-top: 20px;
         width: 80%;
-        height: calc(100vh - 370px);
+        height: calc(100vh - 340px);
         overflow-y: scroll;
         scrollbar-width: 0;
 
@@ -73,19 +73,19 @@
     .contentCategory {
         gap: 10;
         padding: 3 20;
-        font-size: 16;
+        font-size: 12;
     }
 
     .contentCategory img{
-        height: 30px;
+        height: 24px;
     }
 
     .contentBlock {
         gap: 10;
-        font-size: 16;
+        font-size: 12;
         padding: 3 20;
     }
     .contentBlock img {
-        height: 30px;
+        height: 24px;
     }
 }
