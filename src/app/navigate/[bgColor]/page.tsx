@@ -1,18 +1,18 @@
-'use client'
-
 import Link from "next/link";
 import { pages } from "@/utils/appRoutes";
-import { useRouter } from "next/navigation";
 import style from '@/styles/pages/navigate.module.css'
 import ContactBar from '@/components/contactBar'
 
+export function generateStaticParams() {
+  return [{ bgColor: '2DC7FF' }, { bgColor: 'C46AF0' }, { bgColor: 'F7E8A4' }]
+}
+
 export default async function NavigationPage({ params }: { params: Promise<{ bgColor: string }> }) {
   let { bgColor } = await params;
-  console.log(bgColor);
-  
+  bgColor = bgColor.replace('.txt','')
   
   if(!bgColor){
-    bgColor = 'blue'
+    bgColor = 'white'
   }else{
     bgColor = `#${bgColor}`
   }

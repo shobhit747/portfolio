@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import './globals.css';
 import { JetBrains_Mono } from 'next/font/google';
+import i from '@/assets/images/icons/cpp.svg'
 
 const jetBrains_Mono = JetBrains_Mono({
   subsets: ['latin'],
@@ -8,7 +9,7 @@ const jetBrains_Mono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Shobhit | Portfolio"
 };
 
 export const viewport: Viewport = {

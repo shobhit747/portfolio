@@ -20,19 +20,19 @@ export default function Home() {
           <ProjectCard 
             name="YT Audio" 
             description="An Electron based desktop music player that allows you to download and play your favorite songs, podcasts, and other audio content directly from YouTube"
-            projectLink=""
+            projectLink="https://github.com/shobhit747/yt_audio"
             projectImage={ytAudioImg}
           />
           <ProjectCard 
             name="Steam Workdown" 
             description="Steam_Wrokdown is a desktop GUI application built using C++ and GTK 3 that allows users to download Steam Workshop items easily and efficiently."
-            projectLink=""
+            projectLink="https://github.com/shobhit747/Steam-WorkDown"
             projectImage={steamWorkdown}
           />
           <ProjectCard 
             name="NodeJS Backend" 
             description="Simple NodeJS backend API is a backend project that highlights the integration of NodeJS API with Docker, Docker Compose and Mongodb database. "
-            projectLink=""
+            projectLink="https://github.com/shobhit747/SImple-NodeJS-backend"
             projectImage={apiProject}
           />
         </div>

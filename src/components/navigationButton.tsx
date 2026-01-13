@@ -40,7 +40,7 @@ export default function NavigationButtons({currentPage, nextPage, currentPageSty
                 </svg>
             </div>
             {/* middle button */}
-            <div onClick={() => router.replace(`${pages.navigate.href}/${navigateColor.replace('#','')}`)}
+            <div onClick={() => router.push(`${pages.navigate.href}/${navigateColor.replace('#','')}`)}
                 className={style.middleButton}
             >{currentPage}</div>
 

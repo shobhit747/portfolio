@@ -11,3 +11,8 @@ p, a{
     text-decoration: underline;
     text-underline-offset: 4px;
 }
+
+::selection {
+    color: black;
+    background-color: #C46AF0;
+}

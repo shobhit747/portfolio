@@ -16,7 +16,7 @@ export default function ProjectCard({ name, description, projectImage, projectLi
         <div className={style.card}>
             <div className={style.cardHeader}>
                 {name}
-                <a href={projectLink}>
+                <a href={projectLink} target="_blank">
                     <Image src={linkIcon} alt=""/>
                 </a>
             </div>
