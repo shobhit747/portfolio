@@ -41,12 +41,12 @@ export default function TechStack() {
         <div className={style.wholeContentBar} key={contentBar[0]}>
             <div className={style.contentCategory}>
                 {contentBar[0]}
-                <Image src={rightaArrowPix} alt=''/>
+                <Image height={34} src={rightaArrowPix} alt='' style={{width:'auto', height:'auto'}}/>
             </div>
             {contentBar[1].map(dataBlock => (
-                <div className={style.contentBlock}>
+                <div className={style.contentBlock} key={dataBlock[0]}>
                     {dataBlock[0]}
-                    <Image src={dataBlock[1]} alt=''/>
+                    <Image height={34} src={dataBlock[1]} alt='' style={{width:'auto', height:'auto'}}/>
                 </div>
             ))}
         </div>

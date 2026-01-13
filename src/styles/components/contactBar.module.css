@@ -26,3 +26,26 @@
     padding: 0 10;
     font-size: 18;
 }
+
+@media screen and (width <= 650) {
+    .bar{
+        gap: 3;
+        width: calc(100vw - 20);
+        padding: 15;
+        justify-content: center;
+    }
+
+    .bar svg{
+        height: 25px;
+    }
+    .bar a svg{
+        height: 25px;
+    }
+    .mailDiv{
+        gap:5px;
+    }
+    .mailDiv a{
+        padding: 0 5px;
+        font-size: 16px;
+    }
+}

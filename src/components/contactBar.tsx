@@ -29,7 +29,23 @@ export default function Contact({ currentPage }: props){
     const correctPage = currentPage === pages.home.title;
     const posStyle = correctPage ? 'fixed' : 'initial';
     const borderStyle = correctPage ? 'none' : `1px solid ${borderTextAndSvgColor}`;
-    const justifyContentStyle = correctPage ? 'center' : 'flex-start' 
+    
+    // let justifyContentStyle = correctPage ? 'center' : 'flex-start' 
+    let [justifyContentStyle, setJustifyContentStyle] = useState(correctPage ? 'center' : 'flex-start' )
+    useEffect(()=>{
+        if(window.innerWidth <= 650){
+            setJustifyContentStyle('center');
+        }else{
+            setJustifyContentStyle(correctPage ? 'center' : 'flex-start' );
+        }
+        window.addEventListener("resize",()=>{
+            if(window.innerWidth <= 650){
+                setJustifyContentStyle('center');
+            }else{
+                setJustifyContentStyle(correctPage ? 'center' : 'flex-start' );
+            }
+        })
+    },[])
     return(
         <div className={style.bar} style={{
                 position: posStyle,
@@ -37,8 +53,8 @@ export default function Contact({ currentPage }: props){
                 justifyContent: justifyContentStyle
             }}>
             <div className={style.mailDiv}>
-                <a style={{color:borderTextAndSvgColor}} href="mailto:example@gmail.com">example@gmail.com</a>
-                <a href="mailto:example@gmail.com">
+                <a style={{color:borderTextAndSvgColor}} href="mailto:shobhit.dev.work@gmail.com">shobhit.dev.work@gmail.com</a>
+                <a href="mailto:shobhit.dev.work@gmail.com">
                     {/* gmail icon svg */}
                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path style={{fill:borderTextAndSvgColor}} d="M26.5342 7.66414L24.7208 9.08081L17 14.8183L9.27916 9.02414L7.46583 7.60747C7.03864 7.25408 6.51715 7.03378 5.96598 6.97387C5.41481 6.91396 4.85818 7.01707 4.36504 7.27042C3.8719 7.52378 3.46392 7.91625 3.19166 8.39921C2.91939 8.88217 2.7948 9.4344 2.83333 9.98747V26.4066C2.83333 26.9176 3.03631 27.4077 3.39763 27.769C3.75895 28.1303 4.24901 28.3333 4.75999 28.3333H9.27916V17.3966L17 23.1908L24.7208 17.3966V28.3333H29.24C29.751 28.3333 30.241 28.1303 30.6023 27.769C30.9637 27.4077 31.1667 26.9176 31.1667 26.4066V9.98747C31.1933 9.43917 31.06 8.89494 30.7831 8.42095C30.5062 7.94696 30.0975 7.56362 29.6069 7.31752C29.1162 7.07143 28.5645 6.97317 28.0191 7.03471C27.4736 7.09624 26.9577 7.31491 26.5342 7.66414Z"/>

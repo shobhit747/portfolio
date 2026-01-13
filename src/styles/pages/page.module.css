@@ -61,3 +61,26 @@
     fill: black;
 
 }
+
+@media screen and (width <= 650px) {
+    .svgImage{
+        width: 300px;
+    }
+    .content{
+        width: min-content;
+    }
+    .knowMeButton{
+        gap: 5;
+        font-size: 18;
+        padding: 0 15;
+        margin: 40 auto 0 auto;
+    }
+    .knowMeButton svg {
+        width: 40px;
+    }
+    .subText {
+        font-size: 16;
+        font-weight: 500;
+    }
+    
+}

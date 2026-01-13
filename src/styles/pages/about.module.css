@@ -20,6 +20,11 @@
     justify-content: center;
     align-items: center;
     gap: 10;
+    position: fixed;
+    bottom: 50px;
+    left: 70px;
+    z-index: 1;
+    background-color: #F7E8A4;
 }
 .buttonGroup div{
     padding: 20;
@@ -50,4 +55,38 @@
 
 .buttonGroup div:hover svg path{
     fill: black;
+}
+
+@media screen and (width <= 650) {
+    .content{
+        padding-left: 0;
+        width: 100vw;
+        height: 100vh;
+        height: calc(100vh - 202px);
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .content p{
+        font-size: 16px;
+        /* text-align: center; */
+        padding-top: 100px;
+        width: 80%;
+    }
+    .buttonGroup {
+        bottom: 20;
+        left: auto;
+        right: auto;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding-top: 20px;
+        border-top: 0.5px solid black ;
+    }
+    .buttonGroup div{
+        padding: 20;
+        font-size: 20;
+    }
+    .buttonGroup div svg{
+        height: 26;
+    }
 }

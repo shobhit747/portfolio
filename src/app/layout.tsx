@@ -14,7 +14,8 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>){
   return (
     <html lang="en">
-      <body className={jetBrains_Mono.className}>
+      <meta name="viewport" content="with=device-width,initial-scale=1"/>
+      <body className={jetBrains_Mono.className} style={{maxHeight:'100vh', backgroundColor:'blue'}}>
         {children}
       </body>
     </html>

@@ -28,11 +28,7 @@ export default function NavigationButtons({currentPage, nextPage, currentPageSty
     )
     
     return (
-        <div className={style.buttonGroup} style={{
-            position:'fixed',
-            bottom: 50,
-            left: 70,
-        }}>
+        <div className={style.buttonGroup}>
             {/* left button */}
             <div 
                 onClick={() => router.back()}

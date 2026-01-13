@@ -50,3 +50,42 @@
     font-size: 18;
     padding: 3 20;
 }
+
+@media screen and (width <= 650px) {
+    .contentBars{
+        gap: 10px;
+        padding-top: 50px;
+        width: 80%;
+        height: calc(100vh - 370px);
+        overflow-y: scroll;
+        scrollbar-width: 0;
+
+    }
+    
+    .contentBars::-webkit-scrollbar{
+        display: none;
+    }
+
+    .wholeContentBar{
+        gap: 5;
+    }
+
+    .contentCategory {
+        gap: 10;
+        padding: 3 20;
+        font-size: 16;
+    }
+
+    .contentCategory img{
+        height: 30px;
+    }
+
+    .contentBlock {
+        gap: 10;
+        font-size: 16;
+        padding: 3 20;
+    }
+    .contentBlock img {
+        height: 30px;
+    }
+}

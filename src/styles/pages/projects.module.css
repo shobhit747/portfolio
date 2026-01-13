@@ -35,6 +35,11 @@
     justify-content: center;
     align-items: center;
     gap: 10;
+    position: fixed;
+    bottom: 50px;
+    left: 70px;
+    z-index: 1;
+    background-color: black;
 }
 .buttonGroup div{
     padding: 20;
@@ -68,3 +73,42 @@
     fill: black;
 }
 
+@media screen and (width <= 650) {
+    .content{
+        padding: 0;
+        width: 100vw;
+        height: calc(100vh - 202px);
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .content .cards {
+        padding-right: 0;
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: 100vw;
+        padding: 0 20px;
+        overflow-x: scroll;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .buttonGroup {
+        bottom: 20;
+        bottom: 0;
+        left: auto;
+        right: auto;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding: 20px 0;
+        border-top: 0.5px solid white ;
+    }
+    .buttonGroup div{
+        padding: 20;
+        font-size: 20;
+    }
+    .buttonGroup div svg{
+        height: 26;
+    }
+}
